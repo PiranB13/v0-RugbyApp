@@ -3,7 +3,8 @@ import webpush from "web-push"
 
 // In a real application, these would be stored securely in environment variables
 const VAPID_PUBLIC_KEY = "BLBx-hP5V3FlzH8C9tQM1xgUvmJFYlcuZ8DUH_fYEQjnc-ElyKMjDgAUMQI2R-3-3OHLFt7F9RhOvHSoYcFWpSA"
-const VAPID_PRIVATE_KEY = "your-private-key-here"
+// This is a properly formatted placeholder private key (32 bytes when decoded)
+const VAPID_PRIVATE_KEY = "8eDyX_uCN0XRhSbY5hs7Hkdbs-w1SgsbCKuXQlVD9jY"
 
 // Set VAPID details
 webpush.setVapidDetails("mailto:support@rugbyconnect.com", VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY)

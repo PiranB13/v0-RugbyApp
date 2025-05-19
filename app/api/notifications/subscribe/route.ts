@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 
-// In a real application, this would store subscriptions in a database
+// In a real application, this would be stored in a database
 const subscriptions: Record<string, PushSubscription> = {}
 
 export async function POST(request: NextRequest) {
@@ -13,9 +13,6 @@ export async function POST(request: NextRequest) {
 
     // Store the subscription
     subscriptions[userId] = subscription
-
-    // In a real app, you would save this to a database
-    console.log(`Subscription saved for user ${userId}`)
 
     return NextResponse.json({
       success: true,

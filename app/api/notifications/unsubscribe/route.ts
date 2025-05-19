@@ -14,9 +14,6 @@ export async function POST(request: NextRequest) {
     // Remove the subscription
     delete subscriptions[userId]
 
-    // In a real app, you would delete this from a database
-    console.log(`Subscription removed for user ${userId}`)
-
     return NextResponse.json({
       success: true,
       message: "Subscription removed successfully",
